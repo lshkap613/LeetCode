@@ -1,0 +1,13 @@
+import java.util.Iterator;
+import java.lang.Iterable;
+public class UsingIterable implements Iterable<Integer> {
+private Integer[] arr;
+public class IntArray (arr) {
+this.arr = arr;
+}
+public Iterator<Integer> iterator() {
+return new MyIterator();
+}
+private class MyIterator implements Iterator<Integer> {
+}
+}
