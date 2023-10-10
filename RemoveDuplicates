@@ -1,0 +1,26 @@
+// REMOVE DUPLICATES:
+
+import java.util.Set;
+import java.util.TreeSet;
+public class RemoveDuplicates {
+  public static void main(String[] args) {
+    Integer[] listWithDuplicates = {1, 3, 5, 7, 5, 1};
+    System.out.println("List With Duplicates:");
+    for (Integer num : listWithDuplicates) {
+      System.out.print(num + ", ");
+    }
+
+    System.out.println();
+    System.out.println();
+    
+    Set<Integer> intList = new TreeSet<Integer>();
+    for (Integer num : listWithDuplicates) {
+      intList.add(num);
+    }
+    
+    System.out.println("List Without Duplicates:");
+    for (Integer num : intList) {
+      System.out.print(num + ", ");
+    }
+  }
+}
