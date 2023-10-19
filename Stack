@@ -1,0 +1,57 @@
+
+public class Stack<T> {
+	
+	// Create Node
+	private class Node<T> {
+		T value;
+		Node next;
+		
+		// Node constructor
+		Node(T value) {
+			this.value = value;
+			this.next = null;
+		}
+	}
+	
+	// Stack class variables
+	Node top;
+	int size;
+	
+	// Stack constructor - no parameters
+	Stack() {
+		this.top = null;
+		this.size = 0;
+	}
+	
+	// Stack constructor - create stack with one node
+	Stack(T value) {
+		this.size = 0;
+		Node n = new Node(value);
+		this.top = n;
+	}
+	
+	// METHOD: push node onto stack
+	public void push(T value) {
+		Node<T> n = new Node(value);
+		n.next = top;
+		top = n;
+		size ++;
+	}
+	
+	// METHOD: Pop top node off stack
+	public T pop() {
+		if (this.size == 0) {
+			throw new IllegalStateException("Stack is empty");
+		}
+		Node popped = top;
+		top = top.next;
+		size --;
+		return (T) popped.value;
+	}
+	
+	// METHOD: peek at top node
+	public T peek() {
+		return (T) top.value;
+	}
+		
+}
