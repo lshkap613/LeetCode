@@ -1,0 +1,64 @@
+
+public class stackTest {
+
+	public static void main(String[] args) {
+		// Create integer stack
+		Stack stackOne = new Stack<Integer>();
+		
+		// push 5 integers onto stack #1
+		stackOne.push(1);
+		stackOne.push(2);
+		stackOne.push(3);
+		stackOne.push(4);
+		stackOne.push(5);
+		
+		// peek/pop/peek
+		System.out.println("Top of stack:");
+		System.out.println(stackOne.peek());
+		
+		System.out.println("Popping top...");
+		stackOne.pop();
+		
+		System.out.println("New top of stack:");
+		System.out.println(stackOne.peek());
+		
+		System.out.println("Popping top...");
+		stackOne.pop();
+		
+		System.out.println("New top of stack:");
+		System.out.println(stackOne.peek());
+		
+		// Create new double stack
+		System.out.println("\nNew Stack:");
+		
+		Stack stackTwo = new Stack<Double>();
+		
+		// push a few values
+		stackTwo.push(2.8);
+		stackTwo.push(13.9);
+		stackTwo.push(-49);
+		stackTwo.push(108);
+		stackTwo.push(17.71);
+		
+		
+		// peek/pop/peek
+		System.out.println("Top of stack:");
+		System.out.println(stackTwo.peek());
+		
+		System.out.println("Popping top...");
+		stackTwo.pop();
+		
+		System.out.println("New top of stack:");
+		System.out.println(stackTwo.peek());
+		
+		System.out.println("Popping top...");
+		stackTwo.pop();
+		
+		System.out.println("New top of stack:");
+		System.out.println(stackTwo.peek());
+		
+
+		
+	}
+
+}
